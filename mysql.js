@@ -1,3 +1,4 @@
+
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize('mysql://root@localhost:3306/songs'); // ("type of db://username:password@host:port/name of database")
 
@@ -23,3 +24,22 @@ const sequelize = new Sequelize('mysql://root@localhost:3306/songs'); // ("type 
 
 
 module.exports = { sequelize }
+
+//  sequelize.query('UPDATE songs SET name = :name WHERE id = :id ', {
+//     replacements: {
+//         id: 1,
+//         name: "We will"
+//     }
+//     })
+//     .then((res)=>{
+//         console.log(res);
+//      });
+
+// sequelize.query('DELETE FROM songs WHERE id = :id', {
+// replacements: {
+//     id: 1
+//     }
+// })
+// .then((res)=>{
+//     console.log(res);
+//     });
